@@ -1,0 +1,14 @@
+/* Add CSS styles here! */
+
+* {
+    font-family: 'Sora', sans-serif;
+    margin: 0;
+}
+
+body {
+    /* font-family: sans-serif;
+  background: linear-gradient(#3CB281, #37495F);
+  background-size: cover;
+  background-repeat: no-repeat; */
+    /* background: radial-gradient(51.9% 336.54% at 51.9% 50%, #241B4D 0%, #1B1B1B 100%); */
+}
