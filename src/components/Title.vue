@@ -27,6 +27,13 @@ export default {
     font-weight: 800;
     font-size: 50px;
     padding-bottom: 216px;
+    background: -webkit-linear-gradient(
+      89.6deg,
+      #d99cf0 -2.19%,
+      #927bf9 102.14%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 </style>

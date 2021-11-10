@@ -1,16 +1,16 @@
 <template>
   <div class="accueil">
-    <Header/>
-      <Title />
-    
-      
+    <Header />
+    <Title />
+    <Tab />
   </div>
 </template>
 
 <script>
 import Title from "../components/Title.vue";
-import Header from "../components/header.vue"
-// import Nav from "../components/Nav.vue";
+import Header from "../components/header.vue";
+import Nav from "../components/Nav.vue";
+import Tab from "../components/Tab.vue";
 
 export default {
   name: "Accueil",
