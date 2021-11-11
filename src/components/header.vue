@@ -2,21 +2,21 @@
   <div class="header">
     <Nav />
     <Title title="Les meilleurs concerts," title2="en avant-première." />
-    <Tab />
+    <!-- <Concert /> -->
   </div>
 </template>
 
 <script lang="ts">
-import Nav from "../components/Nav.vue";
-import Title from "../components/Title.vue";
-import Tab from "../components/Tab.vue";
+import Nav from "./Nav.vue"
+import Title from "./Title.vue"
+import Concert from "./Concert.vue"
 export default {
   name: "Header",
   props: {},
   components: {
     Nav,
     Title,
-    Tab,
+    Concert,
   },
 };
 </script>

@@ -8,7 +8,7 @@
         <router-link to="/concerts">Concerts</router-link>
       </div>
     </div>
-    <tel>+33 4 50 67 33 22</tel>
+    <p>+33 4 50 67 33 22</p>
   </nav>
 </template>
 
