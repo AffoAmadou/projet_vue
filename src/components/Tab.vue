@@ -2,7 +2,6 @@
   <div
     class="tab_content"
     v-show="title == selectedTitle"
-    :style={backgroundImage:"~/images/icon-pdf.png"}
   >
     <!--  v-bind:style -->
     <!-- <p>{{Image}}</p> -->

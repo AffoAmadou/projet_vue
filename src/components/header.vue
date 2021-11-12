@@ -2,13 +2,7 @@
   <div class="header">
     <Nav />
     <Title title="Les meilleurs concerts," title2="en avant-première." />
-    <Tabs>
-      <Tab title="Tab 1">Hello From Tab 1</Tab>
-      <Tab title="Tab 2">Hello From Tab 2</Tab>
-      <Tab title="Tab 3">Hello From Tab 3</Tab>
-      <Tab title="Tab 4">Hello From Tab 4</Tab>
-      <Tab title="Tab 5">Hello From Tab 5</Tab>
-    </Tabs>
+    
     <!-- <Concert /> -->
   </div>
 </template>
@@ -24,8 +18,7 @@ export default {
   components: {
     Nav,
     Title,
-    Tab,
-    Tabs,
+    
   },
 };
 </script>

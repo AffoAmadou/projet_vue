@@ -6,14 +6,14 @@
           v-for="title in tabTitles"
           :key="title"
           @click="selectedTitle = title"
-          :class="{ selected: (selectedTitle == title) }"
+          :class="{ selected: selectedTitle == title }"
         >
           {{ title }}
         </li>
       </ul>
     </div>
     <!-- //*Tab -->
-    <slot :style="{}" />
+    <slot />
   </div>
 </template>
 
@@ -21,8 +21,9 @@
 import { ref, provide } from "vue"; //*Provide é per utilizzare un componente padre per gestire il figlio
 export default {
   setup(props, { slots }) {
-    //? creo un array che mi prennde l'attributo "title" dai vari tab creati
-    let tabTitles = ref(slots.default().map((tab) => tab.props.title));
+    //? creo un array che mi prende l'attributo "title" dai vari tab creati
+    // let tabTitles = ref(slots.default().map((tab) => tab.props.title));
+   let tabTitles = ref(slots.default().map((tab)=> tab.props.title));
     //? prendo il valore del title selezionato
     let selectedTitle = ref(tabTitles.value[0]);
 
@@ -42,7 +43,7 @@ export default {
   margin: auto;
   color: black;
   background-color: goldenrod;
-  slot{
+  slot {
     width: 80%;
     margin: auto;
   }
