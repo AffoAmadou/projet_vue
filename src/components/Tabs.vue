@@ -6,13 +6,14 @@
           v-for="title in tabTitles"
           :key="title"
           @click="selectedTitle = title"
+          :class="{ selected: (selectedTitle == title) }"
         >
           {{ title }}
         </li>
       </ul>
     </div>
-    //*Tab
-    <slot />
+    <!-- //*Tab -->
+    <slot :style="{}" />
   </div>
 </template>
 
@@ -37,22 +38,33 @@ export default {
 
 <style lang="scss">
 .tabs {
-  width: 80%;
+  width: 100%;
   margin: auto;
   color: black;
+  background-color: goldenrod;
+  slot{
+    width: 80%;
+    margin: auto;
+  }
   .tabs_header {
+    margin: auto;
     ul {
       display: flex;
       width: 80%;
       margin: auto;
       list-style: none;
+      background-color: forestgreen;
+      .selected {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background: linear-gradient(75.5deg, #da8be3 0%, #9681fd 95.43%);
+      }
       li {
         flex-basis: 100%;
         text-align: center;
         padding: 15px 30px;
         color: blue;
         cursor: pointer;
-        &:active,
         &:hover {
           border-top-left-radius: 10px;
           border-top-right-radius: 10px;

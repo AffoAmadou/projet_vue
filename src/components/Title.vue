@@ -26,7 +26,7 @@ export default {
   h2 {
     font-weight: 800;
     font-size: 50px;
-    padding-bottom: 216px;
+    padding-bottom: 108px;
     background: -webkit-linear-gradient(
       89.6deg,
       #d99cf0 -2.19%,
