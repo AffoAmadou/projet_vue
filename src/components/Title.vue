@@ -19,7 +19,7 @@ export default {
 .title {
   text-align: center;
   h1 {
-    padding-top: 215px;
+    padding-top: 107px;
     font-weight: 800;
     font-size: 60px;
   }

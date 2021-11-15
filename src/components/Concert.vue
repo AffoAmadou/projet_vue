@@ -1,59 +1,48 @@
 <template>
-  <div class="wrapper">
-    <button class="change__style" @click="changeStyle()">Change Style</button>
-    <tabs :mode="mode">
-      <tab title="Tab 1">Hello From Tab 1</tab>
-      <tab title="Tab 2">Hello From Tab 2</tab>
-      <tab title="Tab 3">Hello From Tab 3</tab>
-      <tab title="Tab 4">Hello From Tab 4</tab>
-    </tabs>
+  <div class="concert">
+    <Tabs
+      :tabsItems="tabsItems"
+      v-model:selectedTab="this.selectedTab"
+      @update-selected-tab="this.updateSelectedTab"
+    />
+    <Tab
+      v-model:currentConcert="
+        tabsItems.filter((obj) => obj.id === this.selectedTab)[0]
+      "
+    />
   </div>
 </template>
 
 <script>
-  import Tab from './Tab.vue'
-  import Tabs from './Tabs.vue'
+import Tab from "./Tab.vue";
+import Tabs from "./Tabs.vue";
 
-  export default {
-    components: {
-      Tab,
-      Tabs
-    },
-    data () {
-      return {
-        mode: 'dark'
-      }
-    },
-    methods: {
-      changeStyle () {
-        if (this.mode === 'dark') {
-          this.mode = 'light'
-        } else {
-          this.mode = 'dark'
-        }
-      }
+export default {
+  name: "Concert",
+  data() {
+    return{
+      selectedTab: "angele"
     }
-  }
+  },
+  props: {
+    tabsItems: Array,
+  },
+  components: {
+    Tab,
+    Tabs,
+  },
+  methods: {
+    updateSelectedTab(tabId) {
+      this.selectedTab = tabId;
+    },
+  },
+};
 </script>
 
 <style lang="css">
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Karla', sans-serif;
-  }
-  .wrapper {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 20px;
-  }
-
-  .change__style {
-    background-color: #eee;
-    font-size: 1em;
-    margin-bottom: 10px;
-    padding: 5px;
-  }
+.concert {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
 </style>

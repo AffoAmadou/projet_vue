@@ -1,42 +1,51 @@
 <template >
   <div
-    class="tab_content"
-    v-show="title == selectedTitle"
+    class="tab"
+    :style="`background-image:url('${currentConcert.backgroundImage}')`"
   >
-    <!--  v-bind:style -->
-    <!-- <p>{{Image}}</p> -->
-    <slot />
+    <div class="tab_content">
+      <div class="tab_text">
+        <h2>{{ currentConcert.date }}</h2>
+        <p>{{ currentConcert.text }}</p>
+      </div>
+      <button>Réserver</button>
+    </div>
   </div>
 </template>
 
 <script>
-import { inject } from "vue";
-// import Angele from "../images/Angele.png";*
-//import Image from "../images/Angele.png";
-
 export default {
-  props: ["title"],
-  data: () => ({
+  name: "Tab",
+  props: {
+    currentConcert: Object,
+  },
+  data() {
     // Image,
-  }),
-
-  setup() {
-    let selectedTitle = inject("selectedTitle");
-
-    return {
-      selectedTitle,
-    };
+    return {};
   },
 };
 </script>
 
 <style lang="scss">
-.tab_content {
-  height: 355px;
-  background-color: tomato;
-  width: 80%;
+.tab {
+  min-height: 355px;
   margin: auto;
   background-size: cover;
-  border-radius: 0 0 30px 30px ;
+  border-radius: 0 0 30px 30px;
+  display: flex;
+  align-items: flex-end;
+  .tab_content {
+    width: 95%;
+    margin: 0 auto;
+    padding: 31px;
+    display: flex;
+    justify-content: space-between;
+  }
+  button {
+    background: linear-gradient(72.83deg, #d48ae6 0%, #9a82fc 100%);
+    border-radius: 14px;
+    padding: 10px 20px;
+    border: none;
+  }
 }
 </style>
