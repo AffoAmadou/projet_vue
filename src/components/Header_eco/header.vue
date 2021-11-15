@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-import Nav from "./Nav.vue";
-import Title from "./Title.vue";
+import Nav from "../Header_eco/Nav.vue";
+import Title from "../Header_eco/Title.vue";
 
 export default {
   name: "Header",

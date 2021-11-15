@@ -4,6 +4,7 @@
       :tabsItems="tabsItems"
       v-model:selectedTab="this.selectedTab"
       @update-selected-tab="this.updateSelectedTab"
+      :class="{ active }"
     />
     <Tab
       v-model:currentConcert="
@@ -20,9 +21,9 @@ import Tabs from "./Tabs.vue";
 export default {
   name: "Concert",
   data() {
-    return{
-      selectedTab: "angele"
-    }
+    return {
+      selectedTab: "angele",
+    };
   },
   props: {
     tabsItems: Array,

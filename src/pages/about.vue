@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Welcome from '../components/Title.vue'
-import Nav from '../components/Nav.vue'
+import Welcome from '../components/Header_eco/Title.vue'
+import Nav from '../components/Header_eco/Nav.vue'
 
 export default {
   name: 'About',

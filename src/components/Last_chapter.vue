@@ -1,32 +1,32 @@
 <template>
-  <div class="title">
+  <div class="last_chapter">
     <h1>{{ title }}</h1>
-    <h2>{{ title2 }}</h2>
+    <p>{{ text }}</p>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: "Title",
+  name: "Last_chapter",
   props: {
     title: String,
-    title2: String,
+    text: String,
   },
 };
 </script>
 
 <style lang="scss">
-.title {
-  text-align: center;
+.last_chapter {
+  width: 40vw;
+  margin: auto;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20vh auto;
+  margin-bottom: 10vh;
   h1 {
-    padding-top: 107px;
-    font-weight: 800;
-    font-size: 60px;
-  }
-  h2 {
-    font-weight: 800;
-    font-size: 50px;
-    padding-bottom: 108px;
+    font-size: 30px;
     background: -webkit-linear-gradient(
       89.6deg,
       #d99cf0 -2.19%,
@@ -34,6 +34,9 @@ export default {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  p {
+    font-size: 11px;
   }
 }
 </style>

@@ -2,18 +2,30 @@
   <div class="accueil">
     <div class="container">
       <Header />
-      <!-- <Title /> -->
       <Concert :tabsItems="tabsItems" />
+      <Title :title="second_title" />
 
-      <Title :title="second_header" />
+      <div class="display">
+        <Steps
+          v-for="step in fonctionnement"
+          :key="step.id"
+          :id="step.id"
+          :title="step.title"
+          :text="step.text"
+        />
+      </div>
     </div>
+    <Last_chapter :title="last_title" :text="last_sentence" />
   </div>
 </template>
 
 <script>
-import Title from "../components/Title.vue";
-import Header from "../components/header.vue";
-import Concert from "../components/Concert.vue";
+import Title from "../components/Header_eco/Title.vue";
+import Header from "../components/Header_eco/header.vue";
+import Concert from "../components/Concert_tab/Concert.vue";
+import Steps from "../components/Steps.vue";
+
+import Last_chapter from "../components/Last_chapter.vue";
 
 export default {
   name: "Accueil",
@@ -21,10 +33,15 @@ export default {
     Title,
     Header,
     Concert,
+    Steps,
+    Last_chapter,
   },
   data() {
     return {
-      second_header: "buuk, le rêve des fans de concerts.",
+      second_title: "buuk, le rêve des fans de concerts.",
+      last_title: "buuk, aussi sur ton téléphone !",
+      last_sentence:
+        "Télécharge l’application book sur ton smartphone pour pouvoir réserver encore plus facilement et être tenu au courant grâce aux notifications des derniers concerts disponibles sur la plateforme",
       tabsItems: [
         {
           id: "angele",
@@ -64,17 +81,17 @@ export default {
       ],
       fonctionnement: [
         {
-          id: 1,
+          id: "1",
           title: "Choisis ton artiste",
           text: "Nous te proposons régulièrement des concerts en avant-première, choisis le concert de ton artiste préféré parmi ceux proposés",
         },
         {
-          id: 2,
+          id: "2",
           title: "Réserve ton billet",
           text: "buuk te propose les prix les plus attractifs du marché, plus tu réserve tôt, plus tu auras droit à un prix bas. Alors fonce, ne perds pas de temps !",
         },
         {
-          id: 3,
+          id: "3",
           title: "Kiffe ton concert",
           text: "Nous te proposons régulièrement des concerts en avant-première, choisis le concert de ton artiste préféré parmi ceux proposés",
         },
@@ -90,8 +107,6 @@ export default {
   height: 100vh;
   width: 100%;
   display: flex;
-  // justify-content: center;
-  // align-items: center;
   flex-direction: column;
 }
 
@@ -103,5 +118,13 @@ export default {
     #1b1b1b 100%
   );
   border-radius: 0px 0px 150px 150px;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  //  text-align: center;
 }
 </style>
