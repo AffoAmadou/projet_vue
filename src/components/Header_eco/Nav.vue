@@ -3,7 +3,9 @@
     <div class="links">
       <div class="r-links buuk"><router-link to="/">Buuk</router-link></div>
       <div class="r-links"><router-link to="/">Accueil</router-link></div>
-      <div class="r-links"><router-link to="/Concert">Tous les concerts</router-link></div>
+      <div class="r-links">
+        <router-link to="/Concert">Tous les concerts</router-link>
+      </div>
       <div class="r-links">
         <router-link to="/">Concerts</router-link>
       </div>
@@ -19,15 +21,12 @@ export default {
 </script>
 
 <style lang="scss">
-
-tel {
-  font-size: 15px;
-}
 .nav {
   height: 75px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 
   // padding-left: 20px;
   border-bottom: 1px solid #595959;
@@ -67,9 +66,8 @@ tel {
       border-bottom: none;
     }
   }
-}
-
-tel{
- margin-right: 25px;
+  p {
+    font-size: 10px;
+  }
 }
 </style>

@@ -3,25 +3,28 @@
     <div class="container">
       <Header :title1="title" :title2="stitle" />
     </div>
-    <Footer />
+    <Category> <p>sfdfsdffdf</p></Category>
+
+    <!-- <Footer /> -->
   </div>
 </template>
 
 <script>
 import Header from "../components/Header_eco/header.vue";
 import Footer from "../components/footer.vue";
+import Category from "../components/Categories/Category.vue";
 
 export default {
   name: "Concert",
   components: {
     Header,
     Footer,
+    Category,
   },
   data() {
     return {
-
-      title:"Tous les concerts,",
-      stitle:"en avant-première.",
+      title: "Tous les concerts,",
+      stitle: "en avant-première.",
     };
   },
 };
@@ -29,15 +32,16 @@ export default {
 
 <style lang="scss">
 .Concert {
+  width: 100%;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  overflow: hidden;
 }
 .container {
-  // height: 2459px;
+  
   width: 100%;
   background: radial-gradient(
     51.9% 336.54% at 51.9% 50%,

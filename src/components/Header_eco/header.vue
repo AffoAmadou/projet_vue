@@ -25,4 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
+.header{
+  max-width:100vw;
+}
 </style>
