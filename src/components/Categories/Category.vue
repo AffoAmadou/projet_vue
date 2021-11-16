@@ -1,17 +1,8 @@
 <template>
   <div class="category">
-    <h2 class="title">R n B</h2>
+    <h2 class="title">{{id.id}}</h2>
     <div class="card_container">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <Card v-for="data in id.infos" :key="data.name" :data="data"> </Card>
     </div>
   </div>
 </template>
@@ -20,9 +11,13 @@
 import Card from "../Categories/Card.vue";
 export default {
   name: "Category",
+  props: {
+    id: Array,
+  },
   components: {
     Card,
   },
+
   data() {
     return {};
   },

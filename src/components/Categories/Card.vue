@@ -1,11 +1,11 @@
 <template>
-  <div class="card">
+  <div class="card" :style="`background-image:url('${data.backgroundImage}')`">
     <div class="date">
-      <p>le 20 janvier</p>
+      <p>{{ data.date }}</p>
     </div>
     <div class="info">
-      <h3 class="name">sadju</h3>
-      <p class="location">paris ouest</p>
+      <h3 class="name">{{ data.name }}</h3>
+      <p class="location">{{ data.place }}</p>
     </div>
   </div>
 </template>
@@ -14,6 +14,9 @@
 export default {
   name: "Card",
   components: {},
+  props: {
+    data: Object,
+  },
   data() {
     return {};
   },
@@ -26,7 +29,6 @@ export default {
   height: 100%;
   min-width: 19vw;
 
-  background: rgb(159, 159, 223);
   border-radius: 10px;
   float: none;
   margin: 0 0.25%;
@@ -34,14 +36,29 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  background-size: cover;
+  background-repeat: no-repeat;
   zoom: 1;
   .date {
     display: flex;
     justify-content: flex-end;
     padding: 10px;
+    p{
+      font-size: 9px;
+      font-weight: 400;
+    }
   }
   .info {
     padding: 10px;
+    .name{
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .location{
+       font-size: 14px;
+      font-weight: 300;
+    }
   }
 }
 </style>
