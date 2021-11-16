@@ -5,7 +5,7 @@
     </div>
     <Category v-for="style in cat" :key="style.id" :id="style"> </Category>
 
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
