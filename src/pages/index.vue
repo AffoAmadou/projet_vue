@@ -1,7 +1,7 @@
 <template>
   <div class="accueil">
     <div class="container">
-      <Header />
+      <Header :title1="title_index" :title2="stitle_index" />
       <Concert :tabsItems="tabsItems" />
       <Title :title="second_title" />
 
@@ -15,7 +15,9 @@
         />
       </div>
     </div>
-    <Last_chapter :title="last_title" :text="last_sentence" />
+    <LastChapter :title="last_title" :text="last_sentence" />
+    <Stores :playstore="playstore" :appstore="appstore" />
+    <Footer />
   </div>
 </template>
 
@@ -23,10 +25,10 @@
 import Title from "../components/Header_eco/Title.vue";
 import Header from "../components/Header_eco/header.vue";
 import Concert from "../components/Concert_tab/Concert.vue";
-import Steps from "../components/Steps.vue";
-
-import Last_chapter from "../components/Last_chapter.vue";
-
+import Steps from "../components/Concert_tab/Steps.vue";
+import LastChapter from "../components/last_section/Last_chapter.vue";
+import Stores from "../components/last_section/Stores.vue";
+import Footer from "../components/footer.vue";
 export default {
   name: "Accueil",
   components: {
@@ -34,12 +36,18 @@ export default {
     Header,
     Concert,
     Steps,
-    Last_chapter,
+    LastChapter,
+    Stores,
+    Footer,
   },
   data() {
     return {
+      title_index:"Les meilleurs concerts,",
+      stitle_index:"en avant-première.",
       second_title: "buuk, le rêve des fans de concerts.",
       last_title: "buuk, aussi sur ton téléphone !",
+      playstore: "/images/playstore.png",
+      appstore: "/images/appstore.png",
       last_sentence:
         "Télécharge l’application book sur ton smartphone pour pouvoir réserver encore plus facilement et être tenu au courant grâce aux notifications des derniers concerts disponibles sur la plateforme",
       tabsItems: [
@@ -53,28 +61,28 @@ export default {
         {
           id: "damso",
           title: "Damso",
-          backgroundImage: "/images/Angele.png",
+          backgroundImage: "/images/damso.jpeg",
           date: "16 DÉCEMBRE 2020",
           text: "Annecy, La grande roue",
         },
         {
           id: "laylow",
           title: "Laylow",
-          backgroundImage: "/images/Angele.png",
+          backgroundImage: "/images/laylow.jpeg",
           date: "17 DÉCEMBRE 2020",
           text: "Paris, Parc des Princes",
         },
         {
           id: "rihanna",
           title: "Rihanna",
-          backgroundImage: "/images/Angele.png",
+          backgroundImage: "/images/rihanna.jpeg",
           date: "18 DÉCEMBRE 2020",
           text: "Marseille, Stade Vélodrome",
         },
         {
           id: "amir",
           title: "Amir",
-          backgroundImage: "/images/Angele.png",
+          backgroundImage: "/images/amir.jpeg",
           date: "19 DÉCEMBRE 2020",
           text: "Nice, Arena",
         },

@@ -41,7 +41,7 @@ export default {
     justify-content: center;
     position: absolute;
     top: -15px;
-    left: 30px;
+    left: 22px;
   }
   .text {   
     h3 {

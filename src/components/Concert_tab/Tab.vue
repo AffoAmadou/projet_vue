@@ -28,9 +28,10 @@ export default {
 
 <style lang="scss">
 .tab {
-  min-height: 355px;
+  height: 75vh;
   margin: auto;
   background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 0 0 30px 30px;
   display: flex;
   align-items: flex-end;
@@ -44,8 +45,9 @@ export default {
   button {
     background: linear-gradient(72.83deg, #d48ae6 0%, #9a82fc 100%);
     border-radius: 14px;
-    padding: 10px 20px;
+    padding: 10px 30px;
     border: none;
+    color: white;
   }
 }
 </style>

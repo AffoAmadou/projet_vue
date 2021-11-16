@@ -7,17 +7,17 @@ const routes = [{
             import ('../pages/index.vue'),
     },
     {
-        path: '/about',
-        name: 'About',
+        path: '/Concert',
+        name: 'Concert',
         component: () =>
-            import ('../pages/about.vue'),
+            import ('../pages/Concert.vue'),
     },
-    {
-        path: '/concerts',
-        name: 'Concerts',
-        component: () =>
-            import ('../pages/concerts.vue'),
-    },
+    // {
+    //     // path: '/concerts',
+    //     // name: 'Concerts',
+    //     // component: () =>
+    //     //     import ('../pages/concerts.vue'),
+    // },
 ]
 
 const router = createRouter({

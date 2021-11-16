@@ -3,9 +3,9 @@
     <div class="links">
       <div class="r-links buuk"><router-link to="/">Buuk</router-link></div>
       <div class="r-links"><router-link to="/">Accueil</router-link></div>
-      <div class="r-links"><router-link to="/about">About</router-link></div>
+      <div class="r-links"><router-link to="/Concert">Tous les concerts</router-link></div>
       <div class="r-links">
-        <router-link to="/concerts">Concerts</router-link>
+        <router-link to="/">Concerts</router-link>
       </div>
     </div>
     <p>+33 4 50 67 33 22</p>
@@ -19,15 +19,12 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@600;800&display=swap");
 
 tel {
-  font-size: 20px;
-  line-height: 25.2 px;
+  font-size: 15px;
 }
 .nav {
   height: 75px;
-  font-size: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,7 +50,7 @@ tel {
       }
 
       a {
-        font-size: 20px;
+        font-size: 15px;
         line-height: 25.2 px;
         padding-right: 20px;
         padding-left: 20px;

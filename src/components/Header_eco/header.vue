@@ -1,8 +1,8 @@
 <template>
   <div class="header">
     <Nav />
-    <Title title="Les meilleurs concerts," title2="en avant-première." />
-    
+    <Title :title="title1" :title2="title2" />
+
     <!-- <Concert /> -->
   </div>
 </template>
@@ -13,15 +13,16 @@ import Title from "../Header_eco/Title.vue";
 
 export default {
   name: "Header",
-  props: {},
+  props: {
+    title1: String,
+    title2: String,
+  },
   components: {
     Nav,
     Title,
-    
   },
 };
 </script>
 
 <style lang="scss">
-
 </style>

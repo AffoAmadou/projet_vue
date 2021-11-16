@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss">
 .last_chapter {
-  width: 40vw;
+  width: 30vw;
   margin: auto;
   color: black;
   display: flex;
@@ -26,7 +26,7 @@ export default {
   margin: 20vh auto;
   margin-bottom: 10vh;
   h1 {
-    font-size: 30px;
+    font-size: 23px;
     background: -webkit-linear-gradient(
       89.6deg,
       #d99cf0 -2.19%,
